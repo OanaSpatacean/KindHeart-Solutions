@@ -23,8 +23,13 @@ Admin Actions: Admins can add, delete, and update books, users, and orders, prov
 
 # Technologies Used:
 ReactJS: The application is built using the React JavaScript framework, providing a responsive and dynamic user interface.
+
 Firebase (Firestore): We leverage Firebase Firestore for our database needs, ensuring real-time data updates and a scalable backend.
+
 NPM (Node Package Manager): Efficiently manage and install project dependencies.
+
 Custom Authentication: We've developed a secure and user-friendly authentication system for user registration and login.
+
 CSS: Our styles are crafted using CSS, ensuring a clean and visually appealing design.
+
 React Icons: Icons are implemented using the React Icons library, enhancing the overall user experience.
