@@ -1,6 +1,6 @@
 # KindHeart Solutions
 
-Welcome to CharityHub, your dedicated platform for supporting charitable activities across Romania. Powered by cutting-edge technology, we connect individuals and organizations eager to make a difference in their communities. Here's an overview of our platform's key features and functionalities:
+Welcome to KindHeart Solutions, your dedicated platform for supporting charitable activities across Romania. Powered by cutting-edge technology, we connect individuals and organizations eager to make a difference in their communities. Here's an overview of our platform's key features and functionalities:
 
 # Main Features:
 
@@ -12,7 +12,7 @@ Regional Filtering: Filter projects based on specific regions or counties in Rom
 
 Admin Dashboard: For administrators, manage user accounts, oversee projects, and ensure smooth operations. Admins have the authority to add, edit, or remove projects and user information, ensuring transparency and accountability.
 
-Join CharityHub today and become part of a compassionate network dedicated to making a positive impact in communities across Romania!
+Join KindHeart Solutions today and become part of a compassionate network dedicated to making a positive impact in communities across Romania!
 
 # Technologies Used:
 
