@@ -1,0 +1,102 @@
+.container .form
+{
+    margin-top: 30px;
+    padding: 20px 30px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    text-align: center;
+}
+
+.container .form form
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.container .form h2
+{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 32px;
+    color: pink;
+    font-weight: 200;
+}
+
+.container .form .box
+{
+    margin-top: 30px;
+    padding: 20px 30px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+
+.container .form .box input
+{
+    padding: 10px 30px;
+    border: none;
+    outline: none;
+    background: none;
+    border-bottom: 1px solid #010f1c;
+    width: 350px;
+    margin-top: 20px;
+    margin-left: 5%;
+}
+
+.container .form .box p
+{
+    padding: 10px 30px;
+    border: none;
+    outline: none;
+    background: none;
+    width: 350px;
+    margin-top: 1px;
+    margin-left: 37%;
+}
+
+.container .form .box .reg-link
+{
+    color: purple;
+}
+
+.container .form .box .log-link
+{
+    color: purple;
+}
+
+.container .form .box
+{
+    margin-top: 10px;
+    color: black;
+    font-size: 14px; 
+    line-height: 80px;
+    vertical-align: middle;
+}
+
+.container .form .home-link 
+{
+    padding: 10px 30px;
+    color: #fff;
+    border: none;
+    outline: none;
+    background-color: pink;
+    margin-top: 30px; 
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+}
+
+.container .form button
+{
+    padding: 10px 30px;
+    color: #fff;
+    border: none;
+    outline: none;
+    background-color: pink;
+    margin-top: 30px; 
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+}
