@@ -1,40 +1,50 @@
 import React, {useEffect} from 'react'
 import {db} from './firebase'
-import './login.css'
+import './registration.css'
 import {Link} from 'react-router-dom'
 import {getDocs, collection, where, query} from 'firebase/firestore'
 import { useState } from 'react'
 import { useEmail, useEmailValue } from './EmailContext'
 import { useAuth } from './AuthContext';
-import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
-import './login.css';
+
 
 const Login = () => {
     const { email, setEmail} = useEmail();
     const { isAuthenticated, setAuthenticationStatus } = useAuth();
 
     const[password, setPassword] = useState('');
-
-    const auth = getAuth();
+   // const auth = getAuth();
 
     const login = async () =>
     {
         const dbref = collection(db, 'Login');
         try 
         {
-            // Sign in with email and password
-            await signInWithEmailAndPassword(auth, email, password);
-              
+            const matchEmail = query(dbref, where('Email', '==', email));
+            const matchPassword = query(dbref, where('Password', '==', password));
+
+            const emailSnapshot = await getDocs(matchEmail);
+            const emailArray = emailSnapshot.docs.map((doc) => doc.data());
+
+            const passwordSnapshot = await getDocs(matchPassword);
+            const passwordArray = passwordSnapshot.docs.map((doc) => doc.data());
+
             localStorage.setItem("email", email);
 
-            // Update authentication status
-            setAuthenticationStatus(true);
-  
-            alert('Successfully logged in ' + email + '!'); 
+            if (emailArray.length > 0 && passwordArray.length > 0) 
+            {     
+                setAuthenticationStatus(true);  
+                alert("Successfully logged in "+ email + "!");                           
+            } 
+            else 
+            {
+                setAuthenticationStatus(false); 
+                alert("Check your email or password, or create a new account!");
+            }
         } 
         catch (error) 
         {
-            alert(error + " --- Check your email or password, or create a new account!");
+            alert(error);
         }   
     }
 
