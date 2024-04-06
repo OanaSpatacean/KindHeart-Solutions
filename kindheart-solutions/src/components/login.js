@@ -1,11 +1,13 @@
 import React, {useEffect} from 'react'
 import {db} from './firebase'
-import './registration.css'
+import './login.css'
 import {Link} from 'react-router-dom'
 import {getDocs, collection, where, query} from 'firebase/firestore'
 import { useState } from 'react'
 import { useEmail, useEmailValue } from './EmailContext'
 import { useAuth } from './AuthContext';
+import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
+import './login.css';
 
 const Login = () => {
     const { email, setEmail} = useEmail();
@@ -13,42 +15,26 @@ const Login = () => {
 
     const[password, setPassword] = useState('');
 
+    const auth = getAuth();
+
     const login = async () =>
     {
         const dbref = collection(db, 'Login');
         try 
         {
-            const matchEmail = query(dbref, where('Email', '==', email));
-            const matchPassword = query(dbref, where('Password', '==', password));
+            // Sign in with email and password
+            await signInWithEmailAndPassword(auth, email, password);
+              
+            localStorage.setItem("email", email);
 
-            const emailSnapshot = await getDocs(matchEmail);
-            const emailArray = emailSnapshot.docs.map((doc) => doc.data());
-
-            const passwordSnapshot = await getDocs(matchPassword);
-            const passwordArray = passwordSnapshot.docs.map((doc) => doc.data());
-
-            <input
-                type='text'
-                id='email'
-                placeholder='E-mail'
-                value={email} // Use the email state as the input value
-                onChange={(e) => setEmail(e.target.value)}
-            ></input>
-
-            if (emailArray.length > 0 && passwordArray.length > 0) 
-            {     
-                setAuthenticationStatus(true);  
-                alert("Successfully logged in "+ email + "!");                           
-            } 
-            else 
-            {
-                setAuthenticationStatus(false); 
-                alert("Check your email or password, or create a new account!");
-            }
+            // Update authentication status
+            setAuthenticationStatus(true);
+  
+            alert('Successfully logged in ' + email + '!'); 
         } 
         catch (error) 
         {
-            alert(error);
+            alert(error + " --- Check your email or password, or create a new account!");
         }   
     }
 
