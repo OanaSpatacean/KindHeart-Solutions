@@ -6,12 +6,15 @@ import { EmailProvider } from './EmailContext';
 import AdminProjects from './admin-projects'
 import AdminUsers from './admin-users'
 import AdminGiveaways from './admin-giveaways'
+import Home from './home';
+
 
 const Rout = () => {
   return (
     <>
     <EmailProvider>
       <Routes>
+          <Route path='/' element = {<Home/>}/>
           <Route path='/registration' element={<Registration />} />
           <Route path='/login' element={<Login />} />
           <Route path='/admin-projects' element={<AdminProjects />} />

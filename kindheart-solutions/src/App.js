@@ -5,6 +5,7 @@ import { EmailProvider } from './components/EmailContext';
 import { AuthProvider } from './components/AuthContext';
 import { useState } from 'react'
 import Rout from './components/rout';
+import Home from './components/home'
 
 const App = () =>{
   const [email, setEmail] = useState(''); 
@@ -14,9 +15,7 @@ const App = () =>{
         <EmailProvider value={{ email, setEmail }}>
           <BrowserRouter>
             <Nav/>
-            <Rout
-
-            />
+            <Rout/>
           </BrowserRouter>
         </EmailProvider>
       </AuthProvider>
