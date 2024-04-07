@@ -7,11 +7,13 @@ import { useState } from 'react'
 import { useEmail, useEmailValue } from './EmailContext'
 import { useAuth } from './AuthContext';
 
+
 const Login = () => {
     const { email, setEmail} = useEmail();
     const { isAuthenticated, setAuthenticationStatus } = useAuth();
 
     const[password, setPassword] = useState('');
+   // const auth = getAuth();
 
     const login = async () =>
     {
@@ -27,13 +29,7 @@ const Login = () => {
             const passwordSnapshot = await getDocs(matchPassword);
             const passwordArray = passwordSnapshot.docs.map((doc) => doc.data());
 
-            <input
-                type='text'
-                id='email'
-                placeholder='E-mail'
-                value={email} // Use the email state as the input value
-                onChange={(e) => setEmail(e.target.value)}
-            ></input>
+            localStorage.setItem("email", email);
 
             if (emailArray.length > 0 && passwordArray.length > 0) 
             {     
