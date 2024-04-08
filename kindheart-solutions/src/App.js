@@ -1,11 +1,11 @@
 import React from 'react' 
-import Nav from './components/nav'
+import Nav from './components/nav/nav'
 import {BrowserRouter} from 'react-router-dom'
 import { EmailProvider } from './components/EmailContext';
 import { AuthProvider } from './components/AuthContext';
 import { useState } from 'react'
 import Rout from './components/rout';
-import Home from './components/home'
+import Projects from './components/Projects/Projects'
 
 const App = () =>{
   const [email, setEmail] = useState(''); 
