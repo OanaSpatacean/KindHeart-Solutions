@@ -40,7 +40,7 @@ const Home = () => {
                                         <>
                                             <div className='box'>
                                                 <div className='img_box'>
-                                                    <img src={curElm.image} alt=''>
+                                                    <img src={curElm.Image} alt=''>
 
                                                     </img>
                                                 </div>

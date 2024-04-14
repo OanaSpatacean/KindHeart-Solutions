@@ -1,0 +1,122 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+.checkout_container
+{
+    padding: 30px 40px;
+    width: 100%;
+    background: #f6f6f6;
+}
+.checkout_container .contant
+{
+    padding: 10px 20px;
+}
+.checkout_container .contant h2
+{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 32px;
+    color: grey;
+    font-weight: 200;
+}
+.checkout_container .contant .form
+{
+    margin-top: 30px;
+    padding: 20px 30px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.checkout_container .contant .form 
+{
+    display: flex;
+    flex-direction: column;
+}
+.checkout_container .contant .form input
+{
+    padding: 10px 30px;
+    border: none;
+    outline: none;
+    background: none;
+    border-bottom: 1px solid #010f1c;
+    width: 350px;
+    margin-top: 20px;
+    margin-left: 35%;
+}
+.checkout_container .contant .form textarea
+{
+    padding: 10px 30px;
+    border: none;
+    outline: none;
+    background: none;
+    border-bottom: 1px solid #010f1c;
+    max-width: 350px;
+    margin-top: 20px;
+    resize: none;
+    margin-left: 35%;
+}
+.checkout_container .contant .form button
+{
+    margin-top: 30px;
+    width: 100px;
+    padding: 10px 0px;
+    border: none;
+    outline: none;
+    background:none;
+    margin-left: 35%;
+    background: #010f1c;
+    color: #fff;
+    cursor: pointer;
+}
+
+.checkout_container .contant .form form a
+{
+    text-align: center;
+    margin-top: 30px;
+    width: 100px;
+    padding: 10px 0px;
+    border: none;
+    outline: none;
+    background:none;
+    margin-left: 35%;
+    background: grey;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.checkout_container .contant .form button
+{
+    text-align: center;
+    margin-top: 30px;
+    width: 100px;
+    padding: 10px 0px;
+    border: none;
+    outline: none;
+    background:none;
+    margin-left: 35%;
+    background: grey;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.checkout_container .contant .form a
+{
+    text-align: center;
+    margin-top: 30px;
+    width: 100px;
+    padding: 10px 0px;
+    border: none;
+    outline: none;
+    background:none;
+    margin-left: 35%;
+    background: grey;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+}

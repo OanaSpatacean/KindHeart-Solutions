@@ -10,7 +10,7 @@ import { useAuth } from './AuthContext';
 import Login from './login'
 import { useState } from 'react'
 
-const Nav = () =>
+const Nav = ({search, setSearch, searchproduct}) =>
 {
     const { email, setEmail} = useState(window.localStorage.getItem("email"));
     const { isAuthenticated, setAuthenticationStatus } = useAuth();
@@ -23,7 +23,7 @@ const Nav = () =>
                     <FaHandHoldingHeart />
                 </div>
                 <div className='Info'>
-                    <p>Empower yourself to make a meaningful difference in society!</p>
+                    <p>Haide să aducem o schimbare semnificativă în societate!</p>
                 </div>
             </div>
             <div className='mid_header'>
@@ -31,8 +31,8 @@ const Nav = () =>
             <img src='image/logo.jpg' alt='logo'></img>
           </div>
           <div className='search_box'>
-            <input type='text' value='' placeholder='Search a county'></input>
-            <button><BsFillSearchHeartFill /></button>
+            <input type='text' value={search} placeholder='Cauta proiecte in judetul tau' onChange={(e) => setSearch(e.target.value)}></input>
+            <button onClick={searchproduct}><BsFillSearchHeartFill /></button>
           </div> 
           {
             isAuthenticated ?         
@@ -41,7 +41,7 @@ const Nav = () =>
                 <CiLogout />
               </div>
               <div className='btn'>
-                <button  onClick={ () => {setAuthenticationStatus(false); window.location.reload();} }>Sign Out</button>
+                <button  onClick={ () => {setAuthenticationStatus(false); window.location.reload();} }>Delogheaza-te</button>
               </div>
             </div>
             :
@@ -50,7 +50,7 @@ const Nav = () =>
               <FiLogIn />
             </div>
             <div className='btn'>
-              <Link to="/login" className="auth-link" >Sign In</Link>
+              <Link to="/login" className="auth-link" >Logheaza-te</Link>
             </div>
           </div>
           }
@@ -73,7 +73,7 @@ const Nav = () =>
                         <CiUser />
                     </div>
                     <div className='info'>
-                        <p>You have to sign in!</p>
+                        <p>Trebuie sa intri in cont!</p>
                     </div>
                     </>
                   }
@@ -84,30 +84,34 @@ const Nav = () =>
                       <>
                       <ul>
                           <li>
-                            <Link to='/admin-users' className='link'>Manage users</Link>
+                            <Link to='/admin-utilizatori' className='link'>Utilizatori</Link>
                           </li>
                           <li>
-                            <Link to='/admin-projects' className='link'>Manage projects</Link>
+                            <Link to='/admin-proiecte' className='link'>Proiecte</Link>
                           </li>
                           <li>
-                            <Link to='/admin-giveaways' className='link'>Manage giveaways</Link>
+                            <Link to='/admin-donatii' className='link'>Donatii</Link>
+                          </li>
+                          <li>
+                            <Link to='/admin-pareri' className='link'>Pareri</Link>
                           </li>
                         </ul>
                       </>
                       :
                       <>
                         <ul>
-                          <li><Link to='/' className='link'>Home</Link></li>
-                          <li><Link to='/sponsor' className='link'>Sponsor here</Link></li>
-                          <li><Link to='/contribute' className='link'>Contribute</Link></li>
-                          <li><Link to='/about' className='link'>About</Link></li>
+                          <li><Link to='/' className='link'>Acasa</Link></li>
+                          <li><Link to='/proiecte' className='link'>Proiecte</Link></li>
+                          <li><Link to='/contribuieaici' className='link'>Contribuie aici</Link></li>
+                          <li><Link to='/desprenoi' className='link'>Despre noi</Link></li>
+                          <li><Link to='/blog' className='link'>Blog</Link></li>
                           <li><Link to='/contact' className='link'>Contact</Link></li>
                         </ul>
                     </>
                 }
                 </div>
                 <div className='offer'>
-                    <p>Your voice matters! Select a cause and let's contribute together.</p>
+                    <p>Vocea ta conteaza! Alege o cauza si hai sa contribuim impreuna!</p>
                 </div>
             </div>
         </div>

@@ -3,7 +3,7 @@ import { db } from './firebase'
 import './admin.css'
 import {doc, addDoc, collection, deleteDoc, getDocs, setDoc, updateDoc} from 'firebase/firestore'
 
-const CrudUsers = () => {
+const AdminUtilizatori = () => {
     const [ id, setId ] = useState();
     const [ Name, setName ] = useState();
     const [ Email, setEmail ] = useState();
@@ -19,12 +19,12 @@ const CrudUsers = () => {
 
         if(adddata)
         {
-            alert("Data added successfully!");
+            alert("Utilizator adaugat cu succes!");
             await fetch();
         }
         else
         {
-            alert("Error occured when adding data!");
+            alert("Eroare la adaugarea unui utilizator!");
         }
     }
 
@@ -58,12 +58,12 @@ const CrudUsers = () => {
         try 
         {
             await updateDoc(updateref, {Name: Name, Email: Email, Password: Password});
-            alert("Data updated successfully!");
+            alert("Utilizator updatat cu succes!");
             await fetch();
         } 
         catch (error) 
         {
-            alert(error, "Error occured when updating data!");
+            alert(error, "Eroare la updatarea unui utilizator!");
         }
     }
 
@@ -73,33 +73,33 @@ const CrudUsers = () => {
         try 
         {
             await deleteDoc(delref);
-            alert("Data deleted successfully!");
+            alert("Utilizator sters cu succes!");
             await fetch();
         } 
         catch (error) 
         {
-            alert(error, "Error occured when deleting data!");
+            alert(error, "Eroare la stergerea unui utilizator!");
         }
     }
 
     return (
         <>
         <div class='form-container'>
-            <h2>Add / Update Form for Users</h2>
+            <h2>Formular administrare utilizatori</h2>
             <div class='box_FORM'>
-                <input type='text' placeholder='Name' autocomplete='Off' value={Name} onChange={(e) => setName(e.target.value)}></input>
+                <input type='text' placeholder='Nume' autocomplete='Off' value={Name} onChange={(e) => setName(e.target.value)}></input>
             </div>
             <div class='box_FORM'>
                 <input type='text' placeholder='Email' autocomplete='Off' value={Email} onChange={(e) => setEmail(e.target.value)}></input>
             </div>
             <div class='box_FORM'>
-                <input type='password' placeholder='Password' autocomplete='Off' value={Password} onChange={(e) => setPassword(e.target.value)}></input>
+                <input type='password' placeholder='Parola' autocomplete='Off' value={Password} onChange={(e) => setPassword(e.target.value)}></input>
             </div>
-            <button onClick={add}>Add</button>
-            <button onClick={update}>Update</button>
+            <button onClick={add}>Adauga</button>
+            <button onClick={update}>Updateaza</button>
         </div>
         <div class='database'>
-            <h2>CRUD Database</h2>
+            <h2>Baza de date</h2>
             <div class='container'>
                 {
                     fetchData.map((data) => {
@@ -109,8 +109,8 @@ const CrudUsers = () => {
                                 <h3>Email: {data.Email}</h3>
                                 <h3>Name: {data.Name}</h3>
                                 <h3>Password: {data.Password}</h3>                
-                                <button onClick={ () => passData (data.id) }>Update</button>
-                                <button onClick={ () => del (data.id) }>Delete</button>
+                                <button onClick={ () => passData (data.id) }>Updateaza</button>
+                                <button onClick={ () => del (data.id) }>Sterge</button>
                             </div>
                             </>
                         )
@@ -122,4 +122,4 @@ const CrudUsers = () => {
     )
 }
 
-export default CrudUsers
+export default AdminUtilizatori

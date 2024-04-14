@@ -21,12 +21,12 @@ const Registration = () => {
 
             if(emailMatchingArray.length > 0)
             {
-                alert("This Email Adress already exists!");
+                alert("Adresa aceasta de mail exista!");
             }
             else
             {
                 await addDoc(dbref, {Name: name, Email: email, Password: password});
-                alert("Successfully registered!");
+                alert("Te-ai inregistrat cu succes!");
                 window.location.href = '/login'; 
             }
         } 
@@ -40,13 +40,13 @@ const Registration = () => {
         <>
         <div className='container'>
             <div className='form'>
-                <h2>Register</h2>
+                <h2>Inregistrare</h2>
                 <div className='box'>
-                    <input type='text' placeholder='Username' onChange={(e) => setName(e.target.value)}></input>
+                    <input type='text' placeholder='Nume' onChange={(e) => setName(e.target.value)}></input>
                     <input type='email' placeholder='Email' onChange={(e) => setEmail(e.target.value)}></input>
-                    <input type='password' placeholder='Password' onChange={(e) => setPassword(e.target.value)}></input>
-                    <p>Already have an account! <Link to='/login' className="log-link">Login</Link></p>
-                    <button onClick={register}>Sign Up</button>
+                    <input type='password' placeholder='Parola' onChange={(e) => setPassword(e.target.value)}></input>
+                    <p>Ai deja cont! <Link to='/login' className="log-link">Logheaza-te</Link></p>
+                    <button onClick={register}>Creeaza cont</button>
                 </div>
             </div>
         </div>

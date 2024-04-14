@@ -34,12 +34,12 @@ const Login = () => {
             if (emailArray.length > 0 && passwordArray.length > 0) 
             {     
                 setAuthenticationStatus(true);  
-                alert("Successfully logged in "+ email + "!");                           
+                alert("Te-ai logat cu succes "+ email + "!");                           
             } 
             else 
             {
                 setAuthenticationStatus(false); 
-                alert("Check your email or password, or create a new account!");
+                alert("Verifica-ti mail-ul sau parola, sau creeaza un cont nou!");
             }
         } 
         catch (error) 
@@ -52,12 +52,12 @@ const Login = () => {
         <>
         <div className='container'>
             <div className='form'>
-                <h2>Login</h2>
+                <h2>Logare</h2>
                 <div className='box'>
                     <input type='text' id='email' placeholder='Email' value={email} onChange={(e) => setEmail(e.target.value)}></input>
-                    <input type='password' placeholder='Password' onChange={(e) => setPassword(e.target.value)}></input>
-                    <p>Don't have an account? <Link to='/registration' className="reg-link">Register</Link></p>                 
-                    <Link to='/' className="home-link" onClick={login}>Sign In</Link>               
+                    <input type='password' placeholder='Parola' onChange={(e) => setPassword(e.target.value)}></input>
+                    <p>Nu ai cont? <Link to='/registration' className="reg-link">Inregistreaza-te</Link></p>                 
+                    <Link to='/' className="home-link" onClick={login}>Intra in cont</Link>               
                 </div>
             </div>
         </div>
