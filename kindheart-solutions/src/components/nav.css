@@ -117,7 +117,7 @@
     width: 100%;
     padding: 10px 10px;
     display: flex;
-    background: #232323;
+    background: black;
     justify-content: space-between;
 }
 .header .last_header .user_profile
