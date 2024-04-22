@@ -5,7 +5,7 @@ import { EmailProvider } from './components/EmailContext';
 import { AuthProvider } from './components/AuthContext';
 import { useState } from 'react'
 import Rout from './components/rout';
-import Home from './components/home'
+import Proiectelemele from './components/proiectelemele'
 import Homeproduct from './components/home_product'
 
 const App = () =>{

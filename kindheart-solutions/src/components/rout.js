@@ -7,7 +7,7 @@ import AdminProiecte from './admin-proiecte'
 import AdminUtilizatori from './admin-utilizatori'
 import AdminDonatii from './admin-donatii'
 import AdminPareri from './admin-pareri'
-import Home from './home';
+import Proiectelemele from './proiectelemele';
 import Proiecte from './proiecte';
 import Contribuieaici from './contribuieaici';
 import Plata from './plata';
@@ -18,7 +18,7 @@ const Rout = ({shop, Filter, allcatefilter, addtocart, cart, setCart}) => {
     <>
     <EmailProvider>
       <Routes>
-          <Route path='/' element = {<Home/>}/>
+          <Route path='/' element = {<Proiecte  shop={shop} Filter={Filter} allcatefilter={allcatefilter} addtocart={addtocart}/>}/>
           <Route path='/registration' element={<Registration />} />
           <Route path='/login' element={<Login />} />
           <Route path='/admin-proiecte' element={<AdminProiecte />} />
@@ -28,6 +28,7 @@ const Rout = ({shop, Filter, allcatefilter, addtocart, cart, setCart}) => {
           <Route path='/contribuieaici' element={<Contribuieaici cart={cart} setCart ={setCart}/>} />
           <Route path='proiecte' element={<Proiecte shop={shop} Filter={Filter} allcatefilter={allcatefilter} addtocart={addtocart}/>} />
           <Route path='/plata' element={<Plata />} />
+          <Route path='/proiectelemele' element={<Proiectelemele  shop={shop}/>} />
       </Routes>
     </EmailProvider>
     </>
