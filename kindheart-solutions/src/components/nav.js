@@ -18,14 +18,7 @@ const Nav = ({search, setSearch, searchproduct}) =>
     return (
         <>
         <div className='header'>
-            <div className='top_header'>
-                <div className='icon'>
-                    <FaHandHoldingHeart />
-                </div>
-                <div className='Info'>
-                    <p>Haide să aducem o schimbare semnificativă în societate!</p>
-                </div>
-            </div>
+            
             <div className='mid_header'>
           <div className='logo'>
             <img src='image/logo.jpg' alt='logo'></img>
