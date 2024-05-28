@@ -6,6 +6,8 @@ import { BiSolidDonateHeart } from "react-icons/bi";
 const Proiecte = ({shop, Filter, allcatefilter, addtocart}) => {
     const [showDetail, setShowDetail] = useState(false)
     const [detail, setDetail] = useState([])
+    
+    console.log(shop)
 
     const detailpage = (product) => 
     {

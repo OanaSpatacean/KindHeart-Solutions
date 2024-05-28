@@ -40,7 +40,9 @@ const App = () =>{
     
       const searchfilter = Homeproduct.filter((x) => 
       {
-        return x.County === search
+        if(search == undefined)
+          return true;
+        return x.County.toLowerCase().includes(search.toLowerCase())
       })
       setShop(searchfilter)
   }
@@ -71,7 +73,7 @@ const App = () =>{
         <EmailProvider value={{ email, setEmail }}>
           <BrowserRouter>
             <Nav search={search} setSearch={setSearch} searchproduct={searchproduct}/>
-            <Rout setCart={setCart} cart={cart} shop={shop} Filter={Filter} allcatefilter={allcatefilter} addtocart={addtocart}/>
+            <Rout setCart={setCart} cart={cart} shop={shop} Filter={Filter} allcatefilter={allcatefilter} addtocart={addtocart} email={email}/>
           </BrowserRouter>
         </EmailProvider>
       </AuthProvider>

@@ -24,7 +24,7 @@ const Contribuieaici = ({cart, setCart}) => {
     })
     setCart(cart.map((curElm) => 
     {
-      return curElm.id === product.id ? {...exist ,qty: exist.qty - 1}: curElm
+      return curElm.id === product.id ? {...exist ,qty: exist.qty>0 ? exist.qty - 1: 0}: curElm
     }))
   }
 

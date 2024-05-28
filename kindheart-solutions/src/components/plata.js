@@ -43,16 +43,25 @@ const Plata = () => {
             const CVVSnapshot = await getDocs(matchCVV);
             const CVVArray = CVVSnapshot.docs.map((doc) => doc.data());
 
-            if (NameArray.length > 0 && PhoneArray.length > 0 && NumberArray.length > 0 && ExpireArray.length > 0 && CVVArray.length > 0) 
-            {      
-                setOrderSent(false);
-                alert("A avut loc o eroare, te rog verifica daca toate campurile sunt completate!");                           
-            } 
-            else 
-            {
+            // if (NameArray.length > 0 && PhoneArray.length > 0 && NumberArray.length > 0 && ExpireArray.length > 0 && CVVArray.length > 0) 
+            // {      
+            //     setOrderSent(false);
+            //     alert("A avut loc o eroare, te rog verifica daca toate campurile sunt completate!");                           
+            // } 
+            // else 
+            // {
+            //     await addDoc(dbref, {Name: Name, Phone: Phone, Number: Number, Expire: Expire, CVV: CVV});
+            //     setOrderSent(true);
+            //     alert("Donatia ta a fost trimisa! Plata a fost procesata!");
+            // }
+
+            if(Name.length > 0 && Phone.length==10 && Number.length== 16 && Expire.length == 5 && CVV.length == 3){
                 await addDoc(dbref, {Name: Name, Phone: Phone, Number: Number, Expire: Expire, CVV: CVV});
                 setOrderSent(true);
                 alert("Donatia ta a fost trimisa! Plata a fost procesata!");
+            }else{
+                setOrderSent(false);
+                alert("Datele introduse nu sunt corecte!");
             }
         } 
         catch (error) 

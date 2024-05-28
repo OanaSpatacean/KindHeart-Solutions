@@ -18,60 +18,45 @@ const Nav = ({search, setSearch, searchproduct}) =>
     return (
         <>
         <div className='header'>
-            
-            <div className='mid_header'>
-          <div className='logo'>
-            <img src='image/logo.jpg' alt='logo'></img>
-          </div>
-          <div className='search_box'>
-            <input type='text' value={search} placeholder='Cauta proiecte in judetul tau' onChange={(e) => setSearch(e.target.value)}></input>
-            <button onClick={searchproduct}><BsFillSearchHeartFill /></button>
-          </div> 
-          {
-            isAuthenticated ?         
-            <div className='user'>
-              <div className='icon'>
-                <CiLogout />
-              </div>
-              <div className='btn'>
-                <button  onClick={ () => {setAuthenticationStatus(false); window.location.reload();} }>Delogheaza-te</button>
-              </div>
-            </div>
-            :
-          <div className='user'>
-            <div className='icon'>
-              <FiLogIn />
-            </div>
-            <div className='btn'>
-              <Link to="/login" className="auth-link" >Logheaza-te</Link>
-            </div>
-          </div>
-          }
-        </div>
+           
         <div className='last_header'>
                 <div className='user_profile'>
                   {
                     isAuthenticated ?
                     <>
-                    <div className='icon'>
-                        <CiUser />
+                    <div className='logo'>
+                      <img src='image/logo.jpg' alt='logo'></img>
                     </div>
                     <div className='info'>
                         <h2>{window.localStorage.getItem("email")}</h2>
+                      <div className='btn'>
+                        <button  onClick={ () => {setAuthenticationStatus(false); window.location.reload();} }>Delogheaza-te</button>
+                      </div>
                     </div>
+                    
                     </>
                     :
                     <>
-                    <div className='icon'>
-                        <CiUser />
+                    <div className='logo'>
+                      <img src='image/logo.jpg' alt='logo'></img>
                     </div>
+                    <br/>
+                    <br/>
                     <div className='info'>
-                        <p>Trebuie sa intri in cont!</p>
+                      <div className='btn'>
+                        <Link to="/login" className="auth-link" >Logheaza-te</Link>
+                      </div>
                     </div>
                     </>
                   }
                 </div>
+                
+                <div className='search_box'>
+                  <input type='text' value={search} placeholder='Cauta proiecte in judetul tau' onChange={(e) => setSearch(e.target.value)}></input>
+                  <button onClick={searchproduct}><BsFillSearchHeartFill /></button>
+                </div> 
                 <div className='nav'>
+                
                 {
                       isAuthenticated && window.localStorage.getItem("email") === 'admin@yahoo.com' ? 
                       <>
@@ -101,9 +86,6 @@ const Nav = ({search, setSearch, searchproduct}) =>
                         </ul>
                     </>
                 }
-                </div>
-                <div className='offer'>
-                    <p>Vocea ta conteaza! Alege o cauza si hai sa contribuim impreuna!</p>
                 </div>
             </div>
         </div>

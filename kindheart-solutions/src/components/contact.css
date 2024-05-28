@@ -7,7 +7,7 @@
   a.social {
     margin: 0 1rem;
     transition: transform 250ms;
-    display: inline-block;
+    /* display: inline-block; */
   }
 
   a.social:hover {
@@ -17,12 +17,45 @@
 
   a.facebook {
     color: #4968ad;
+    /* display: flex; */
+    /* justify-content: center; */
+    align-items: center;
+    min-height: 10vh;
+
   }
   
   a.instagram {
     color: black;
+    /* display: flex;
+    justify-content: center; */
+    align-items: center;
+    min-height: 10vh;
   }
 
-  a.instagram {
-    color: black;
+  .content{
+    margin-top: 30px;
+    
   }
+  a.tel{
+    color:black;
+    text-decoration: none;
+  }
+
+  a.map{
+    color:black;
+    text-decoration: none;
+    margin-bottom:200px;
+  }
+
+  .custom-font{
+    font-family: "Carattere", cursive;
+    font-style:normal;
+    margin-bottom: 20px;
+    }
+
+    .margin125{
+      margin-top:125px;
+    }
+    .margin50{
+      margin-bottom:25px;
+    }

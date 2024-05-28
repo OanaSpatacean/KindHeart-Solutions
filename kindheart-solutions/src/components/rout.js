@@ -14,7 +14,7 @@ import Plata from './plata';
 import Contact from './contact';
 
 
-const Rout = ({shop, Filter, allcatefilter, addtocart, cart, setCart}) => {
+const Rout = ({shop, Filter, allcatefilter, addtocart, cart, setCart, email}) => {
   return (
     <>
     <EmailProvider>
@@ -29,7 +29,7 @@ const Rout = ({shop, Filter, allcatefilter, addtocart, cart, setCart}) => {
           <Route path='/contribuieaici' element={<Contribuieaici cart={cart} setCart ={setCart}/>} />
           <Route path='proiecte' element={<Proiecte shop={shop} Filter={Filter} allcatefilter={allcatefilter} addtocart={addtocart}/>} />
           <Route path='/plata' element={<Plata />} />
-          <Route path='/proiectelemele' element={<Proiectelemele  shop={shop}/>} />
+          <Route path='/proiectelemele' element={<Proiectelemele  shop={shop} email={email}/>} />
           <Route path='/contact' element={<Contact />} />
 
       </Routes>
