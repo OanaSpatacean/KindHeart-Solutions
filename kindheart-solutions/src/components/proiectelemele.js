@@ -3,7 +3,7 @@ import './proiecte.css'
 import { AiFillEye, AiOutlineClose} from 'react-icons/ai';
 import { BiSolidDonateHeart } from "react-icons/bi";
 
-const Proiectelemele = ({shop}) => {
+const Proiectelemele = ({shop, email}) => {
     const [showDetail, setShowDetail] = useState(false)
     const [detail, setDetail] = useState([])
 
@@ -36,7 +36,6 @@ const Proiectelemele = ({shop}) => {
                     <h4># {detail.County}</h4>
                     <h2>{detail.Name}</h2>
                     <p>{detail.Description}</p>
-                    <button onClick={()=>window.location.href="/editeaza/"+detail.id}>Editeaza</button>
                 </div>
             </div>
         </div>
@@ -67,8 +66,9 @@ const Proiectelemele = ({shop}) => {
                     <h2>Alege cauza care te-a impresionat cel mai mult</h2>
                     <div className='product_container'>
                         {
-                            shop.map((curElm) => 
+                            shop.filter((el)=>el.owner==email).map((curElm) => 
                             {
+
                                 return(
                                     <>
                                     <div className='box'>
@@ -80,7 +80,7 @@ const Proiectelemele = ({shop}) => {
                                         </div>
                                         <div className='detail'>
                                             <h3>{curElm.Name}</h3>
-                                            <button onClick={()=>window.location.href="/editeaza/"+curElm.id}>Editeaza</button>
+                                            <button onClick={()=>detailpage (curElm)}>Detalii</button>
                                         </div>
                                     </div>
                                     </>

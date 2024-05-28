@@ -4,6 +4,9 @@ import './admin.css'
 import {doc, addDoc, collection, deleteDoc, getDocs, setDoc, updateDoc} from 'firebase/firestore'
 
 const AdminPareri = () => {
+
+
+
 }
 
 export default AdminPareri

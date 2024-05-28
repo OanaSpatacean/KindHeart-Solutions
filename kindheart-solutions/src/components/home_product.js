@@ -11,8 +11,8 @@ const collectionReference = collection(db, "Proiecte");
     const querySnapshot = await getDocs(collectionReference);
     querySnapshot.docs.forEach((doc) => {
       const opportunityData = doc.data();
-      const { id, Name, County, Image, Description} = opportunityData;
-      const opportunity = { id, Name, County, Image, Description };
+      const { id, Name, County, Image, Description} = opportunityData;//adaugat owner proiect
+      const opportunity = { id, Name, County, Image, Description};//adaugat owner proiect
       Homeproduct.push(opportunity);
     });
 
