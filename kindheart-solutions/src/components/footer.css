@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+.footer {
+    padding: 30px 40px;
+    width: 100%;
+    background: #333; /* Darker background color */
+}
+
+.footer .page h2 {
+    color: white;
+    font-size: 25px;
+}
+
+.footer .container {
+    max-width: 1200px; /* Adjusted for better readability */
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer .about {
+    margin-left: 12%;
+    max-width: 30%;
+}
+
+.footer .about .logo img {
+    margin-left: 30%;
+    height: 80px;
+    width: 40%; /* Adjusted width for the logo */
+}
+
+.footer .about .detail p {
+    margin-top: 20px; /* Reduced margin top */
+    font-size: 16px;
+    color: #ccc; /* Lighter text color */
+    text-align: center;
+}
+
+.footer .about .detail .icon {
+    margin-top: 20px;
+    display: flex;
+}
+
+.footer .about .detail .icon li {
+    color: #ccc; /* Lighter text color */
+    margin-left: 20px;
+    list-style: none;
+    padding: 10px 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* More subtle box-shadow */
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    border-radius: 5px;
+}
+
+.footer .about .detail .icon li:hover {
+    background: #fff; /* White background on hover */
+    color: #e44d26; /* Orange color on hover */
+}
+
+.footer .page {
+    margin-top: 20px;
+}
+
+.footer .page h3 {
+    font-size: 24px; /* Reduced font size */
+    color: #fff; /* White text color */
+}
+
+.footer .page ul {
+    margin-top: 10px;
+    margin-left: 15px; /* Adjusted margin for better alignment */
+}
+
+.footer .page ul li {
+    margin-top: 5px;
+    color: #ccc; /* Lighter text color */
+    font-size: 14px;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.footer .page ul li:hover {
+    color: #e44d26; /* Orange color on hover */
+}
+
+.footer .page ul a {
+    color: white;
+}

@@ -7,6 +7,7 @@ import { useState } from 'react'
 import Rout from './components/rout';
 import Proiectelemele from './components/proiectelemele'
 import Homeproduct from './components/home_product'
+import Footer from './components/footer'
 
 const App = () =>{
   const [email, setEmail] = useState(''); 
@@ -74,6 +75,7 @@ const App = () =>{
           <BrowserRouter>
             <Nav search={search} setSearch={setSearch} searchproduct={searchproduct}/>
             <Rout setCart={setCart} cart={cart} shop={shop} Filter={Filter} allcatefilter={allcatefilter} addtocart={addtocart} email={email}/>
+            <Footer/>
           </BrowserRouter>
         </EmailProvider>
       </AuthProvider>
