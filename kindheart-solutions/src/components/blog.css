@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+.checkout_container {
+    padding: 30px 40px;
+    width: 100%;
+    background: #f6f6f6;
+}
+
+.checkout_container .contant {
+    padding: 10px 20px;
+}
+
+.checkout_container .contant h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 32px;
+    color: black;
+    font-weight: 200;
+}
+
+.checkout_container .contant .form {
+    margin-top: 30px;
+    padding: 20px 30px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.checkout_container .contant .form input {
+    padding: 10px 30px;
+    border: none;
+    outline: none;
+    background: none;
+    border-bottom: 1px solid #010f1c;
+    width: 350px;
+    margin-top: 20px;
+}
+
+.checkout_container .contant .form textarea {
+    padding: 10px 30px;
+    border: none;
+    outline: none;
+    background: none;
+    border-bottom: 1px solid #010f1c;
+    max-width: 350px;
+    margin-top: 20px;
+    resize: none;
+}
+
+.checkout_container .contant .form button,
+.checkout_container .contant .form a {
+    text-align: center;
+    margin-top: 30px;
+    width: 300px; /* Adjusted width to fit the text */
+    padding: 10px 0px;
+    border: none;
+    outline: none;
+    background: black;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    margin-left: 450px
+}
+
+.form-container h2
+{
+    color: black;
+    font-size: 32px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 45px;
+}
+
+.form-container .box_FORM
+{
+    width: 100%;
+    margin-top: 10px;
+}
+
+.form-container .box_FORM input
+{
+    padding: 10px 30px;
+    border: none;
+    outline: none;
+    background: none;
+    border-bottom: 1px solid #010f1c;
+    width: 350px;
+    margin-top: 20px;
+    margin-left: 5%;
+}
+.form-container button
+{
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    background: BLACK;
+    color: white;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    margin-left: 100px;
+    width: 90px;
+}
+
+
+.database
+{
+    padding: 20px 40px;
+    width: 100%;
+}
+
+.database h2
+{
+    color: black;
+    font-size: 32px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.database .container
+{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+}
+
+.database .container .box {
+    padding: 10px 20px;
+    margin-top: 20px;
+    background: white;
+    border-radius: 5px;
+    font-style: italic; /* Make the text italic */
+    font-family: 'Arial', sans-serif; /* Choose a visually appealing font family */
+    font-size: 18px; /* Adjust the font size for better readability */
+    color: black; /* Optional: Set a text color */
+    display: block; /* Ensure each box takes up the full width */
+    width: 100%; /* Ensure full width of the container */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+
+
+.database .container .box h3
+{
+    margin-top: 10px;
+    font-size: 16px;
+    color: black;
+}
+
+.database .box button
+{
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    background: black;
+    color: white;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    margin-left: 20px;
+}

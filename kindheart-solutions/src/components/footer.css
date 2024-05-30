@@ -59,7 +59,7 @@
 
 .footer .about .detail .icon li:hover {
     background: #fff; /* White background on hover */
-    color: #e44d26; /* Orange color on hover */
+    color: black; /* Orange color on hover */
 }
 
 .footer .page {
@@ -85,7 +85,7 @@
 }
 
 .footer .page ul li:hover {
-    color: #e44d26; /* Orange color on hover */
+    color: black; /* Orange color on hover */
 }
 
 .footer .page ul a {
