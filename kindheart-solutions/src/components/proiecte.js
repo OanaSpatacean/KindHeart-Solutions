@@ -97,7 +97,7 @@ const Proiecte = ({shop, Filter, allcatefilter, addtocart}) => {
                                 return(
                                     <>
                                     <div className='box'>
-                                        <div className='img_box'>
+                                        <div className='img_box img_auto'>
                                             <img src={curElm.Image} alt=''></img>
                                             <div className='icon'>
                                                <li onClick={() => addtocart (curElm)}><BiSolidDonateHeart /></li> 

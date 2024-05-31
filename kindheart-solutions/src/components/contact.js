@@ -55,7 +55,7 @@ const Contact = () => {
                 <div className='content'>
 
 
-                    <a href="https://www.facebook.com/learnbuildteach/"
+                    <a href="https://www.facebook.com/"
                         className="facebook social">
                         <FontAwesomeIcon icon={faFacebook} size="3x" />
                     </a>
