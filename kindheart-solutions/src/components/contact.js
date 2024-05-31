@@ -12,7 +12,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import {
     faFacebook,
-    faInstagram
+    faInstagram,
+    faTwitter
   } from "@fortawesome/free-brands-svg-icons";
 
   
@@ -65,8 +66,8 @@ const Contact = () => {
                     </a>
 
                     <a href="https://www.instagram.com/oana718/"
-                        className="instagram social">
-                    <FontAwesomeIcon icon={faInstagram} size="3x" />
+                        className="twitter social">
+                    <FontAwesomeIcon icon={faTwitter} size="3x" />
                     </a>
 
                 </div>

@@ -55,7 +55,7 @@ const Plata = () => {
             //     alert("Donatia ta a fost trimisa! Plata a fost procesata!");
             // }
 
-            if(Name.length > 0 && Phone.length==10 && Number.length== 16 && Expire.length == 5 && CVV.length == 3){
+            if(Name.length>0 && Phone.length>0 && Number.length>0 && Expire.length>0 && CVV.length>0){
                 await addDoc(dbref, {Name: Name, Phone: Phone, Number: Number, Expire: Expire, CVV: CVV});
                 setOrderSent(true);
                 alert("Donatia ta a fost trimisa! Plata a fost procesata!");

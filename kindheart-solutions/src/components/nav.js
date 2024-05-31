@@ -30,7 +30,7 @@ const Nav = ({search, setSearch, searchproduct}) =>
                     <div className='info'>
                         <h2>{window.localStorage.getItem("email")}</h2>
                       <div className='btn'>
-                        <button  onClick={ () => {setAuthenticationStatus(false); window.location.reload();} }>Delogheaza-te</button>
+                        <button  onClick={ () => {setAuthenticationStatus(false); window.location.reload();} }>Delogheaza-te <CiLogout/></button>
                       </div>
                     </div>
                     
@@ -44,7 +44,7 @@ const Nav = ({search, setSearch, searchproduct}) =>
                     <br/>
                     <div className='info'>
                       <div className='btn'>
-                        <Link to="/login" className="auth-link" >Logheaza-te</Link>
+                        <Link to="/login" className="auth-link" >Logheaza-te <FiLogIn /></Link>
                       </div>
                     </div>
                     </>
@@ -78,10 +78,11 @@ const Nav = ({search, setSearch, searchproduct}) =>
                       :
                       <>
                         <ul>
+                          <li><Link to='/' className='link'>Acasa</Link></li>
                           <li><Link to='/proiecte' className='link'>Proiecte</Link></li>
-                          <li><Link to='/proiectelemele' className='link'>Proiectele mele</Link></li>
                           <li><Link to='/contribuieaici' className='link'>Contribuie aici</Link></li>
                           <li><Link to='/blog' className='link'>Blog</Link></li>
+                          <li><Link to='/desprenoi' className='link'>Despre noi</Link></li>
                           <li><Link to='/contact' className='link'>Contact</Link></li>
                         </ul>
                     </>
