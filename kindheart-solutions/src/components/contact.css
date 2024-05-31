@@ -55,7 +55,8 @@
 
     .margin125{
       margin-top:125px;
+      margin-bottom: 100px; /* Adaugă spațiu suplimentar în partea de jos */
     }
     .margin50{
-      margin-bottom:25px;
+      margin-bottom:30px;
     }

@@ -1,0 +1,312 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+.imageBox img {
+    width: 457px; /* Ajustează dimensiunea după preferințe */
+    height: 250px; /* Menține raportul de aspect al imaginii */
+}
+
+.home {
+    width: 100%;
+}
+
+.home .top_banner {
+    max-width: 100%;
+    height: 395px;
+    background: url('http://localhost:3000/image/slide-1.webp') no-repeat center center/cover;
+    padding: 50px 60px;
+}
+.home .top_banner .contant {
+    width: 100%;
+    position: relative;
+    top: 20%;
+    padding: 10px 50px;
+}
+.home .top_banner .contant h3 {
+    text-transform: capitalize;
+    color: black;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+.home .top_banner .contant h2 {
+    text-transform: uppercase;
+    color: #232323;
+    letter-spacing: 1px;
+    font-size: 42px;
+    margin-top: 10px;
+}
+.home .top_banner .contant p {
+    color: #232323;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+.home .top_banner .contant .link {
+    padding: 10px 30px;
+    background: black;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+.home .top_banner .contant .link:hover {
+    color: black;
+    background: white;
+}
+.home .trending {
+    padding: 20px 30px;
+    width: 100%;
+}
+.home .trending .container {
+    max-width: 100%;
+    display: flex;
+}
+.home .trending .container .left_box {
+    padding: 10px 20px;
+    width: 75%;
+}
+.home .trending .container .left_box .header {
+    display: flex;
+    max-width: 100%;
+    padding: 10px 10px;
+    background: #f6f7f8;
+    justify-content: space-between;
+}
+.home .trending .container .left_box .header .heading h2 {
+    text-transform: uppercase;
+    font-size: 16px;
+    color: #232323;
+    margin-top: 5px;
+    cursor: pointer;
+}
+.home .trending .container .left_box .header .cate {
+    display: flex;
+    margin-top: 5px;
+}
+.home .trending .container .left_box .header .cate h3 {
+    text-transform: capitalize;
+    margin-right: 10px;
+    color: #232323;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.home .trending .container .left_box .header .cate h3:hover {
+    color: black;
+}
+.home .trending .container .left_box .products {
+    max-width: 100%;
+}
+.home .trending .container .left_box .products .container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.home .trending .container .left_box .products button {
+    margin-top: 20px;
+    margin-left: 45%;
+    padding: 10px 30px;
+    background: none;
+    outline: none;
+    border: none;
+    color: #fff;
+    font-weight: 600;
+    background: black;
+    cursor: pointer;
+}
+.home .trending .container .left_box .products .container .box {
+    width: 195px;
+    height: 345px; /* Increased height to accommodate the button */
+    border: 4px solid #f6f7f8;
+    margin-top: 20px;
+    margin-left: 20px;
+    overflow: hidden;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensures the button is always at the bottom */
+}
+.home .trending .container .left_box .products .container .box .img_box {
+    display: flex;
+    position: relative;
+}
+.home .trending .container .left_box .products .container .box .img_box img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+}
+.home .trending .container .left_box .products .container .box .img_box .icon {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    transition: 0.5s;
+}
+.home .trending .container .left_box .products .container .box:hover .img_box .icon {
+    right: -32%;
+}
+.home .trending .container .left_box .products .container .box .img_box .icon .icon_box {
+    padding: 10px 10px;
+    margin-top: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    z-index: 1;
+    background: #fff;
+    color: black;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.home .trending .container .left_box .products .container .box .img_box .icon .icon_box:hover {
+    color: #fff;
+    background: black;
+}
+.home .trending .container .left_box .products .container .box .info {
+    padding: 10px 10px;
+    flex-grow: 1; /* Allows the info to take up all available space */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Spaces out the content */
+}
+.home .trending .container .left_box .products .container .box .info h3 {
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #232323;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+.home .trending .container .left_box .products .container .box .info p {
+    color: black;
+    margin-top: 5px;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+.home .trending .container .left_box .products .container .box .info .btn {
+    align-self: flex-end; /* Aligns the button to the end of the flex container */
+    margin-top: auto; /* Pushes the button to the bottom of the box */
+    padding: 10px 20px;
+    border: none;
+    background: black;
+    color: white;
+    text-transform: capitalize;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.home .trending .container .left_box .products .container .box .info .btn:hover {
+    background: #fff;
+    color: black;
+}
+.home .trending .container .right_box {
+    padding: 10px 20px;
+    width: 24%;
+    display: flex;
+    flex-direction: column;
+}
+.home .trending .container .right_box .right_container {
+    max-width: 100%;
+}
+.home .trending .container .right_box .right_container .testimonial {
+    width: 100%;
+    border: 4px solid #f6f7f8;
+}
+.home .trending .container .right_box .right_container .testimonial .head {
+    padding: 10px 10px;
+    width: 100%;
+    background: #f6f7f8;
+}
+.home .trending .container .right_box .right_container .testimonial .head h3 {
+    text-align: center;
+    color: #232323;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    letter-spacing: 1px;
+}
+.home .trending .container .right_box .right_container .testimonial .detail {
+    padding: 10px 20px;
+}
+.home .trending .container .right_box .right_container .testimonial .detail .img_box img {
+    margin-top: 40px;
+    margin-left: 50px;
+}
+.home .trending .container .right_box .right_container .testimonial .detail .info {
+    margin-top: 10px;
+}
+.home .trending .container .right_box .right_container .testimonial .detail .info h3 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #232323;
+}
+.home .trending .container .right_box .right_container .testimonial .detail .info h4 {
+    text-align: center;
+    font-size: 12px;
+    margin-top: 10px;
+    color: black;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+.home .trending .container .right_box .right_container .testimonial .detail .info p {
+    margin-top: 10px;
+    text-align: center;
+    font-weight: 600;
+    color: #232323;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+.home .trending .container .right_box .right_container .newsletter {
+    width: 100%;
+    background: #f6f7f8;
+    margin-top: 20px;
+    padding: 10px 10px;
+}
+.home .trending .container .right_box .right_container .newsletter .head {
+    margin-top: 10px;
+    width: 100%;
+}
+.home .trending .container .right_box .right_container .newsletter .head h3 {
+    text-align: center;
+    color: #232323;
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+.home .trending .container .right_box .right_container .newsletter .form {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.home .trending .container .right_box .right_container .newsletter .form .box {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+}
+.home .trending .container .right_box .right_container .newsletter .form .box input {
+    width: 80%;
+    height: 35px;
+    outline: none;
+    border: none;
+    padding: 5px 10px;
+    background: white;
+}
+.home .trending .container .right_box .right_container .newsletter .form .box .btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    outline: none;
+    border: none;
+    color: white;
+    text-transform: uppercase;
+    border-radius: 5px;
+    background: black;
+    cursor: pointer;
+}
+.home .trending .container .right_box .right_container .newsletter .form .box .btn:hover {
+    background: white;
+    color: black;
+}

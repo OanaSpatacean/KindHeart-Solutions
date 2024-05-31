@@ -13,13 +13,16 @@ import Contribuieaici from './contribuieaici';
 import Plata from './plata';
 import Contact from './contact';
 import AdaugareProiect from './adaugare-proiect';
-
+import Home from './home';
+import DespreNoi from './desprenoi';
+import Blog from './blog';
 
 const Rout = ({shop, Filter, allcatefilter, addtocart, cart, setCart, email}) => {
   return (
     <>
     <EmailProvider>
       <Routes>
+          <Route path='/' element={<Home addtocart={addtocart}/>}/>
           <Route path='/' element = {<Proiecte  shop={shop} Filter={Filter} allcatefilter={allcatefilter} addtocart={addtocart}/>}/>
           <Route path='/registration' element={<Registration />} />
           <Route path='/login' element={<Login />} />
@@ -33,7 +36,8 @@ const Rout = ({shop, Filter, allcatefilter, addtocart, cart, setCart, email}) =>
           <Route path='/proiectelemele' element={<Proiectelemele  shop={shop} email={email}/>} />
           <Route path='/contact' element={<Contact />} />
           <Route path='/adaugare-proiect' element={<AdaugareProiect />} />
-
+          <Route path='/desprenoi' element={<DespreNoi />} />
+          <Route path='/blog' element={<Blog />} />
       </Routes>
     </EmailProvider>
     </>

@@ -21,7 +21,7 @@ const AdminDonatii = () => {
         if(adddata)
         {
             alert("Donatie adaugata cu succes!");
-            window.location.reload();
+            await fetch();
         }
         else
         {
@@ -62,7 +62,7 @@ const AdminDonatii = () => {
         {
             await updateDoc(updateref, {Name: Name, Phone: Phone, Number: Number, Expire: Expire, CVV: CVV});
             alert("Donatie updatata cu succes!");
-            window.location.reload();
+            await fetch();
         } 
         catch (error) 
         {
@@ -77,7 +77,7 @@ const AdminDonatii = () => {
         {
             await deleteDoc(delref);
             alert("Donatie stearsa cu succes!");
-            window.location.reload();
+            await fetch();
         } 
         catch (error) 
         {

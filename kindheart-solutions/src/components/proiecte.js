@@ -57,14 +57,15 @@ const Proiecte = ({shop, Filter, allcatefilter, addtocart}) => {
                     <div className='box'>
                         <ul>
                             <li onClick={() => allcatefilter ()}># Toate</li>
+                            <li onClick={() => Filter ("București")}># București</li>
                             <li onClick={() => Filter ("Alba")}># Alba</li>
                             <li onClick={() => Filter ("Timis")}># Timis</li>
                             <li onClick={() => Filter ("Cluj")}># Cluj</li>
                             <li onClick={() => Filter ("Brasov")}># Brasov</li>
                             <li onClick={() => Filter ("Sibiu")}># Sibiu</li>
                             <li onClick={() => Filter ("Hunedoara")}># Hunedoara</li>
-                            <li onClick={() => Filter ("Hunedoara")}># Hunedoara</li>
-                            <li onClick={() => Filter ("Hunedoara")}># Hunedoara</li>
+                            <li onClick={() => Filter ("Iasi")}># Iasi</li>
+                            <li onClick={() => Filter ("Maramures")}># Maramures</li>
                             <li onClick={() => Filter ("Valcea")}># Valcea</li>
                             <li onClick={() => Filter ("Galati")}># Galati</li>
                             <li onClick={() => Filter ("Dolj")}># Dolj</li>
@@ -99,7 +100,7 @@ const Proiecte = ({shop, Filter, allcatefilter, addtocart}) => {
                                         <div className='img_box'>
                                             <img src={curElm.Image} alt=''></img>
                                             <div className='icon'>
-                                               <li onClick={() => addtocart (detail)}><BiSolidDonateHeart /></li> 
+                                               <li onClick={() => addtocart (curElm)}><BiSolidDonateHeart /></li> 
                                                <li onClick={() => detailpage (curElm)}><AiFillEye /></li> 
                                             </div>
                                         </div>
