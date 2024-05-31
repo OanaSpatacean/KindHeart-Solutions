@@ -12,6 +12,7 @@ import Proiecte from './proiecte';
 import Contribuieaici from './contribuieaici';
 import Plata from './plata';
 import Contact from './contact';
+import AdaugareProiect from './adaugare-proiect';
 import Home from './home';
 import DespreNoi from './desprenoi';
 import Blog from './blog';
@@ -34,9 +35,9 @@ const Rout = ({shop, Filter, allcatefilter, addtocart, cart, setCart, email}) =>
           <Route path='/plata' element={<Plata />} />
           <Route path='/proiectelemele' element={<Proiectelemele  shop={shop} email={email}/>} />
           <Route path='/contact' element={<Contact />} />
+          <Route path='/adaugare-proiect' element={<AdaugareProiect />} />
           <Route path='/desprenoi' element={<DespreNoi />} />
           <Route path='/blog' element={<Blog />} />
-
       </Routes>
     </EmailProvider>
     </>

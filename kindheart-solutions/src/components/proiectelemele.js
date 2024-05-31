@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import './proiecte.css'
 import { AiFillEye, AiOutlineClose} from 'react-icons/ai';
 import { BiSolidDonateHeart } from "react-icons/bi";
+import {Link} from 'react-router-dom';
+
 
 const Proiectelemele = ({shop, email}) => {
     const [showDetail, setShowDetail] = useState(false)
@@ -63,7 +65,7 @@ const Proiectelemele = ({shop, email}) => {
                     </div>
                 </div>
                 <div className='product_box'>
-                    <h2>Alege cauza care te-a impresionat cel mai mult</h2>
+                    <h2>Alege o cauză</h2>
                     <div className='product_container'>
                         {
                             shop.filter((el)=>el.owner==email).map((curElm) => 
@@ -88,6 +90,11 @@ const Proiectelemele = ({shop, email}) => {
                             })
                         }
                     </div>
+
+                    <div className='add'>
+                        <button><Link to='/adaugare-proiect' className='link'>Adaugă proiect</Link></button>
+                    </div>
+                            
                 </div>
             </div>
         </div>
