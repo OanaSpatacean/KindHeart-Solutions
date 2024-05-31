@@ -145,6 +145,9 @@
     width:100%;
     height: 270px;
 }
+.img_auto img{
+    width: auto !important;
+}
 .shop .container .right_box .product_box .product_container .box .img_box .icon
 {
     display: flex;
