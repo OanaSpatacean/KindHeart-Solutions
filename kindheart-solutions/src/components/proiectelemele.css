@@ -207,6 +207,12 @@
     cursor: pointer;
     transition: 0.5s;
 }
+
+
+
+
+
+
 .shop .container .right_box .product_box .product_container .box .detail button:hover
 {
     color: black;
